@@ -22,7 +22,7 @@ public class MataKuliahDemo13 {
             System.out.print("Jumlah Jam : ");
             arrayOfMataKuliah[i].jumlahJam = Integer.parseInt(sc.nextLine());
             System.out.println("------------------------------------------");
-           
+           //mmmm
 
         }
         for (int i = 0; i < arrayOfMataKuliah.length; i++) {
