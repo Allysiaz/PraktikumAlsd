@@ -6,10 +6,10 @@ public class MainNilaiMhs {
         NilaiMhs mhs = new NilaiMhs(nilaiUTS, nilaiUAS);
 
         int tertinggi = mhs.utsTertinggi(0, nilaiUTS.length-1);
-        System.out.println("Niali UTS tertinggi: " + tertinggi);
+        System.out.println("Niali UTS Tertinggi: " + tertinggi);
 
         int terendah = mhs.utsTerendah(0, nilaiUTS.length-1);
-        System.out.println("Nilai UTS terendah: " + terendah);
+        System.out.println("Nilai UTS Terendah: " + terendah);
 
         double rataRataUAS = mhs.hitungRataUAS();
         System.out.println("Rata-rata nilai UAS: " + rataRataUAS);
