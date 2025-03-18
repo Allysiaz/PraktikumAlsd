@@ -3,15 +3,11 @@ package PRAKTIKUM05;
 public class Faktorial {
     int faktorialBF(int n){
         int fakto = 1;
-        int i = 1;
-        do {
+        for (int i = 1; i <= n; i++) {
             fakto = fakto * i;
-            i++; // Increment variabel counter
-        } while (i <= n);
-
+        }
         return fakto;
     }
-    
     
     int faktorialDC(int n){
         if (n==1) {
