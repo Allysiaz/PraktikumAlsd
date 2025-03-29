@@ -68,12 +68,17 @@ public class DataDosen13 {
 
     public void PencarianDataSequential13(String namaCari) {
         boolean ditemukan = false;
+        int jumlahDitemukan = 0;
         for (int i = 0; i < idx; i++) {
             if (dataDosen[i].nama.equalsIgnoreCase(namaCari)) {
                 System.out.println("Data dosen ditemukan pada indeks ke-" + i + ":");
                 dataDosen[i].tampil();
                 ditemukan = true;
-            }
+                jumlahDitemukan++;
+            } 
+        }
+        if (jumlahDitemukan > 1) {
+            System.out.println("PERINGATAN: Ditemukan lebih dari 1 dosen dengan nama " + namaCari + ".");
         }
         if (!ditemukan) {
             System.out.println("Data dosen dengan nama '" + namaCari + "' Tidak Ditemukan.");
