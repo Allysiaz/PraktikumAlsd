@@ -1,4 +1,4 @@
-package PRAKTIKUM06;
+package PRAKTIKUM07;
 import java.util.Scanner;
 public class DosenMain13 {
     public static void main(String[] args) {
@@ -12,7 +12,9 @@ public class DosenMain13 {
             System.out.println("3. Sorting ASC (Usia Termuda ke Tertua - Bubble Sort)");
             System.out.println("4. Sorting DSC (Usia Tertua ke Termuda - Selection Sort)");
             System.out.println("5. Sorting DSC (Usia Tertua ke Termuda - Insertion Sort)");
-            System.out.println("6. Keluar");
+            System.out.println("6. Cari Dosen (Nama - Sequential)");
+            System.out.println("7. Cari Dosen (Usia - Binary)");
+            System.out.println("8. Keluar");
             System.out.print("Pilih menu: ");
             int pilihan = sc.nextInt();
             sc.nextLine();
@@ -61,6 +63,18 @@ public class DosenMain13 {
                     break;
                 
                 case 6:
+                    System.out.print("Masukkan nama dosen yang dicari: ");
+                    String namaCari = sc.nextLine();
+                    dataDosen.PencarianDataSequential13(namaCari);
+                    break;
+
+                case 7:
+                    System.out.print("Masukkan usia dosen yang dicari: ");
+                    int usiaCari = sc.nextInt();
+                    dataDosen.PencarianDataBinary13(usiaCari);
+                    break;
+
+                case 8:
                     System.out.println("Terima kasih! Program selesai.");
                     sc.close();
                     return;

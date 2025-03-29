@@ -1,4 +1,4 @@
-package PRAKTIKUM06;
+package PRAKTIKUM07;
 
 public class Dosen13 {
     String kode;
