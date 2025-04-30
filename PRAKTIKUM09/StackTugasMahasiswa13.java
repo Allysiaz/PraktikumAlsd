@@ -74,4 +74,18 @@ public class StackTugasMahasiswa13 {
         }
         System.out.println("");
     }
+
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi13 stack = new StackKonversi13();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()) {
+            biner += stack.pop();
+        }
+        return biner;
+    }
 }
