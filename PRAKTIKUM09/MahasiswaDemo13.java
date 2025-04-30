@@ -10,7 +10,9 @@ public class MahasiswaDemo13 {
             System.out.println("1. Mengumpulkan Tugas");
             System.out.println("2. Menilai Tugas");
             System.out.println("3. Melihat Tugas Teratas");
-            System.out.println("4. Melihat Daftar Tugas");
+            System.out.println("4. Melihat Tugas Terbawah");
+            System.out.println("5. Melihat Daftar Tugas");
+            System.out.println("6. Melihat Banyak Tugas");
             System.out.print("Pilih: ");
             pilih = scan.nextInt();
             scan.nextLine();
@@ -24,7 +26,7 @@ public class MahasiswaDemo13 {
                     String kelas = scan.nextLine();
                     Mahasiswa13 mhs = new Mahasiswa13(nama, nim, kelas);
                     stack.push(mhs);
-                    System.out.printf("Tugas %s berhasil dikumpulkan\n", mhs.nama);
+                    System.out.printf("Tugas %s berhasil dikumpulkan.\n", mhs.nama);
                     break;
                 case 2:
                     Mahasiswa13 dinilai = stack.pop();
@@ -43,16 +45,26 @@ public class MahasiswaDemo13 {
                     }
                     break;
                 case 4:
+                    Mahasiswa13 terbawah = stack.peekBottom();
+                    if (terbawah != null) {
+                        System.out.println("Tugas pertama kali dikumpulkan oleh " + terbawah.nama);
+                    }
+                    break;
+                case 5:
                     System.out.println("Daftar semua tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
+                    break;
+                case 6: 
+                    int jumlahTugas = stack.jumlahData();
+                    System.out.print("Jumlah tugas yang sudah dikumpulkan: " + jumlahTugas);
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
                     break;
             }
             
-        } while (pilih >= 1 && pilih <= 4);
+        } while (pilih >= 1 && pilih <= 6);
 
     }
 }

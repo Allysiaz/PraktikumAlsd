@@ -37,6 +37,7 @@ public class StackTugasMahasiswa13 {
     public Mahasiswa13 pop() {
         if (!isEmpty()) {
             Mahasiswa13 m = stack[top];
+            stack[top] = null;
             top--;
             return m;
         } else {
@@ -53,7 +54,20 @@ public class StackTugasMahasiswa13 {
             return null;
         }
     }
+
+    public Mahasiswa13 peekBottom() {
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan.");
+            return null;
+        }
+    }
     
+    public int jumlahData() {
+        return top + 1;
+    }
+
     public void print() {
         for (int i = 0; i <= top; i++) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim +"\t"+ stack[i].kelas);
