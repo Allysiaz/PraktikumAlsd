@@ -12,6 +12,10 @@ public class Costumer {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String toString() {
         return " ID: "+this.id+ " Nama: "+this.name;
     }

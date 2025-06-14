@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+
 public class DemoArrayList {
     public static void main(String[] args) {
         
@@ -20,8 +22,20 @@ public class DemoArrayList {
         System.out.println(costumer.name);
         costumer.name = "Budi Utomo";
 
+        ArrayList<Costumer> newCostumers = new ArrayList<>();
+        newCostumers.add(new Costumer(201, "Della"));
+        newCostumers.add(new Costumer(202, "Victor"));
+        newCostumers.add(new Costumer(203, "Sarah"));
+       
+        costumers.addAll(newCostumers);
+
         for (Costumer cust : costumers) {
             System.out.println(cust.toString());
         }
+
+        System.out.println(costumers);
+        Collections.sort(costumers, (c1, c2) -> c1.name.compareTo(c2.name));
+        System.out.println(costumers);
+
     }
 }
